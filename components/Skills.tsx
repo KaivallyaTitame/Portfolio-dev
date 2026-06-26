@@ -1,0 +1,40 @@
+"use client";
+
+import { portfolio } from "@/data/portfolio";
+
+export default function Skills() {
+  const categories = Object.keys(portfolio.skills) as (keyof typeof portfolio.skills)[];
+
+  return (
+    <section id="skills" className="py-24 px-6 bg-[#0D1528]">
+      <div className="max-w-5xl mx-auto">
+        {/* Section label */}
+        <div className="flex items-center gap-4 mb-12">
+          <span className="font-[family-name:var(--font-jetbrains-mono)] text-[#38BDF8] text-sm">02 / Technical Skills</span>
+          <div className="flex-1 h-px bg-[#1A2E4A]"></div>
+        </div>
+
+        {/* Auto-fit grid */}
+        <div className="grid gap-5" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))" }}>
+          {categories.map((category) => (
+            <div key={category} className="bg-[#08101F] border border-[#1A2E4A] rounded-xl p-5">
+              <h3 className="font-[family-name:var(--font-jetbrains-mono)] text-[#38BDF8] text-xs uppercase tracking-wider mb-4">
+                {category}
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {portfolio.skills[category].map((skill: string) => (
+                  <span
+                    key={skill}
+                    className="font-[family-name:var(--font-jetbrains-mono)] text-xs px-3 py-1.5 bg-[#0D1528] text-gray-300 border border-[#1A2E4A] rounded-md hover:text-[#38BDF8] hover:border-[#38BDF8]/50 transition-colors cursor-default"
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
