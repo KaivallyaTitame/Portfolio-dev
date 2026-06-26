@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const roles = [
-  "Full Stack Developer",
-  "Backend Engineer",
+  "Software Developer",
+  "Full Stack Engineer",
+  "Backend Developer",
   "AI Systems Builder",
   "MEAN Stack Developer",
-  "Your Next Developer",
 ];
 
 export default function Hero() {
@@ -51,18 +52,33 @@ export default function Hero() {
       <div className="absolute bottom-1/4 -right-32 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl" />
 
       <div className="max-w-4xl text-center relative z-10">
+        {/* Profile Image */}
+        <div className="animate-fade-in-up mb-6 flex justify-center">
+          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-[#38BDF8]/30 shadow-lg shadow-[#38BDF8]/10">
+            <Image
+              src="/profile.jpg"
+              alt="Kaivallya Titame"
+              width={160}
+              height={160}
+              className="w-full h-full object-cover"
+              priority
+              unoptimized
+            />
+          </div>
+        </div>
+
         {/* Monospace label */}
-        <p className="animate-fade-in-up font-[family-name:var(--font-jetbrains-mono)] text-[#38BDF8]/70 text-sm md:text-base mb-4">
+        <p className="animate-fade-in-up [animation-delay:200ms] font-[family-name:var(--font-jetbrains-mono)] text-[#38BDF8]/70 text-sm md:text-base mb-4">
           {"> hello, world! I'm"}
         </p>
 
         {/* Big name */}
-        <h1 className="animate-fade-in-up [animation-delay:200ms] font-[family-name:var(--font-space-grotesk)] text-5xl md:text-7xl lg:text-[72px] font-bold text-white mb-4">
+        <h1 className="animate-fade-in-up [animation-delay:300ms] font-[family-name:var(--font-space-grotesk)] text-5xl md:text-7xl lg:text-[72px] font-bold text-white mb-4">
           Kaivallya Titame
         </h1>
 
         {/* Typing animation */}
-        <div className="animate-fade-in-up [animation-delay:400ms] h-12 md:h-14 flex items-center justify-center mb-6">
+        <div className="animate-fade-in-up [animation-delay:500ms] h-12 md:h-14 flex items-center justify-center mb-6">
           <span className="font-[family-name:var(--font-space-grotesk)] text-2xl md:text-4xl font-semibold text-[#38BDF8]">
             {text}
           </span>
@@ -70,15 +86,15 @@ export default function Hero() {
         </div>
 
         {/* Tagline */}
-        <p className="animate-fade-in-up [animation-delay:600ms] text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
-          I build high-performance web apps, scalable APIs, and AI-powered automation tools. Let&apos;s bring your idea to life.
+        <p className="animate-fade-in-up [animation-delay:700ms] text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-6 leading-relaxed">
+          B.Tech IT graduate with hands-on experience building scalable web apps, REST APIs, and AI-powered automation frameworks. Seeking Software Developer roles in Pune.
         </p>
 
         {/* Green badge */}
-        <div className="animate-fade-in-up [animation-delay:800ms] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 mb-8">
+        <div className="animate-fade-in-up [animation-delay:900ms] inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-500/10 border border-green-500/30 mb-8">
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
           <span className="text-green-400 text-sm font-medium">
-            Available for Freelance · Pune, India
+            Open to Opportunities · Pune, India
           </span>
         </div>
 
@@ -88,33 +104,35 @@ export default function Hero() {
             href="#projects"
             className="px-8 py-3 bg-[#38BDF8] text-[#08101F] font-semibold rounded-md hover:bg-[#38BDF8]/90 hover:shadow-lg hover:shadow-[#38BDF8]/20 transition-all duration-300"
           >
-            View My Work
+            View My Projects
           </a>
           <a
-            href="#contact"
+            href="https://github.com/KaivallyaTitame"
+            target="_blank"
+            rel="noopener noreferrer"
             className="px-8 py-3 border border-[#38BDF8] text-[#38BDF8] rounded-md hover:bg-[#38BDF8]/10 transition-all duration-300"
           >
-            Start a Project
+            GitHub Profile
           </a>
         </div>
 
         {/* Stats row */}
         <div className="animate-fade-in-up [animation-delay:1200ms] grid grid-cols-2 md:grid-cols-4 gap-6 max-w-2xl mx-auto">
           <div className="text-center p-4 rounded-lg bg-white/[0.02] border border-[#1A2E4A]/50">
-            <p className="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">6+</p>
-            <p className="text-gray-500 text-sm mt-1">Projects Delivered</p>
+            <p className="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">8+</p>
+            <p className="text-gray-500 text-sm mt-1">Projects Built</p>
           </div>
           <div className="text-center p-4 rounded-lg bg-white/[0.02] border border-[#1A2E4A]/50">
             <p className="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">6 mo</p>
             <p className="text-gray-500 text-sm mt-1">Industry Exp</p>
           </div>
           <div className="text-center p-4 rounded-lg bg-white/[0.02] border border-[#1A2E4A]/50">
-            <p className="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">24h</p>
-            <p className="text-gray-500 text-sm mt-1">Response Time</p>
+            <p className="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">23</p>
+            <p className="text-gray-500 text-sm mt-1">GitHub Repos</p>
           </div>
           <div className="text-center p-4 rounded-lg bg-white/[0.02] border border-[#1A2E4A]/50">
-            <p className="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">100%</p>
-            <p className="text-gray-500 text-sm mt-1">Client Focus</p>
+            <p className="text-2xl md:text-3xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">130+</p>
+            <p className="text-gray-500 text-sm mt-1">DSA Problems</p>
           </div>
         </div>
       </div>

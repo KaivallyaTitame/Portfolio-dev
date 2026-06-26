@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { portfolio } from "@/data/portfolio";
 
-const filters = ["All", "Full Stack", "AI & Automation", "Systems"] as const;
+const filters = ["All", "Full Stack", "AI & Automation", "Frontend", "Backend", "Systems"] as const;
 
 export default function Projects() {
   const [active, setActive] = useState<string>("All");

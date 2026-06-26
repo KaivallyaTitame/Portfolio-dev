@@ -7,7 +7,7 @@ const navLinks = [
   { name: "Skills", href: "#skills" },
   { name: "Experience", href: "#experience" },
   { name: "Projects", href: "#projects" },
-  { name: "Services", href: "#services" },
+  { name: "Certifications", href: "#certifications" },
   { name: "Contact", href: "#contact" },
 ];
 
@@ -45,13 +45,14 @@ export default function Navbar() {
           ))}
         </ul>
 
-        {/* Hire Me button */}
+        {/* Resume button */}
         <a
-          href="#contact"
-          onClick={(e) => handleClick(e, "#contact")}
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden lg:inline-block px-5 py-2 border border-[#38BDF8] text-[#38BDF8] text-sm rounded-md hover:bg-[#38BDF8]/10 transition-colors"
         >
-          Hire Me
+          Resume
         </a>
 
         {/* Mobile toggle */}
@@ -87,11 +88,12 @@ export default function Navbar() {
             ))}
             <li>
               <a
-                href="#contact"
-                onClick={(e) => handleClick(e, "#contact")}
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-5 py-2 border border-[#38BDF8] text-[#38BDF8] text-sm rounded-md hover:bg-[#38BDF8]/10 transition-colors"
               >
-                Hire Me
+                Resume
               </a>
             </li>
           </ul>

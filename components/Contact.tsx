@@ -8,7 +8,7 @@ export default function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
-    subject: "Freelance Project",
+    subject: "Job Opportunity",
     message: "",
   });
 
@@ -35,11 +35,11 @@ export default function Contact() {
         <div className="grid md:grid-cols-2 gap-12">
           <div data-aos="fade-up">
             <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold text-white mb-4">
-              Let&apos;s Build Something Together
+              Let&apos;s Connect
             </h2>
             <p className="text-gray-400 leading-relaxed mb-8">
-              Have a project in mind? Need a custom web app, API, or automation tool?
-              I&apos;m based in {portfolio.location} and ready to bring your ideas to life.
+              Looking for a motivated Software Developer? I&apos;m actively seeking entry-level roles in Pune.
+              Feel free to reach out for job opportunities, collaborations, or just to say hi.
             </p>
 
             {/* Social links */}
@@ -120,9 +120,9 @@ export default function Contact() {
                   onChange={(e) => setForm({ ...form, subject: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-lg bg-[#0D1528] border border-[#1A2E4A] text-white text-sm focus:border-[#38BDF8] focus:outline-none transition-colors"
                 >
-                  <option value="Freelance Project">Freelance Project</option>
-                  <option value="Web App Development">Web App Development</option>
-                  <option value="API Development">API Development</option>
+                  <option value="Job Opportunity">Job Opportunity</option>
+                  <option value="Collaboration">Collaboration</option>
+                  <option value="Project Discussion">Project Discussion</option>
                   <option value="Other">Other</option>
                 </select>
               </div>
@@ -134,7 +134,7 @@ export default function Contact() {
                   value={form.message}
                   onChange={(e) => setForm({ ...form, message: e.target.value })}
                   className="w-full px-4 py-2.5 rounded-lg bg-[#0D1528] border border-[#1A2E4A] text-white text-sm focus:border-[#38BDF8] focus:outline-none transition-colors resize-none"
-                  placeholder="Tell me about your project or opportunity..."
+                  placeholder="Tell me about the opportunity or how we can collaborate..."
                 />
               </div>
               <button
@@ -144,7 +144,7 @@ export default function Contact() {
                 Send Message
               </button>
             </form>
-            <p className="text-gray-500 text-xs text-center mt-4">Response within 24 hours</p>
+            <p className="text-gray-500 text-xs text-center mt-4">I typically respond within 24 hours</p>
           </div>
         </div>
       </div>

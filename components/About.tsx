@@ -16,10 +16,10 @@ export default function About() {
         <div className="grid md:grid-cols-2 gap-12">
           <div data-aos="fade-up">
             <p className="text-gray-300 text-base leading-relaxed mb-4">
-              I&apos;m a freelance developer with 6 months of professional experience at Qualys, where I built an AI-driven agent framework using MCP servers and Playwright for autonomous UI navigation.
+              {portfolio.summary}
             </p>
             <p className="text-gray-400 text-base leading-relaxed mb-8">
-              I specialize in Java, Spring Boot, Angular, and full-stack web development. Whether you need a custom web app, REST API, or AI automation tool — I deliver clean, production-ready code on time.
+              I specialize in Java, Spring Boot, Angular, and full-stack web development. I write clean, well-documented code and enjoy solving complex problems with elegant solutions.
             </p>
 
             <div className="flex flex-wrap gap-3">
@@ -27,10 +27,10 @@ export default function About() {
                 📍 {portfolio.location}
               </span>
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#08101F] border border-[#1A2E4A] text-gray-300 text-sm">
-                💻 Freelance Developer
+                🎓 B.Tech IT - VIIT Pune
               </span>
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-green-500/10 border border-green-500/30 text-green-400 text-sm">
-                ● Open for Projects
+                ● Open to Opportunities
               </span>
             </div>
           </div>
@@ -43,38 +43,38 @@ export default function About() {
                 </svg>
               </div>
               <div>
-                <h3 className="text-white font-semibold text-lg">Why Work With Me</h3>
-                <p className="text-gray-400 text-sm">Professional freelance development</p>
+                <h3 className="text-white font-semibold text-lg">Education</h3>
+                <p className="text-gray-400 text-sm">{portfolio.education.institute}</p>
               </div>
             </div>
 
             <div className="space-y-3 mb-6">
               <div className="flex items-center gap-3 text-sm">
                 <span className="text-[#38BDF8]">▹</span>
-                <span className="text-gray-300">6 months industry experience at Qualys</span>
+                <span className="text-gray-300">{portfolio.education.degree}</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <span className="text-[#38BDF8]">▹</span>
-                <span className="text-gray-300">Clean, well-documented, production-ready code</span>
+                <span className="text-gray-300">GPA: {portfolio.education.gpa}</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <span className="text-[#38BDF8]">▹</span>
-                <span className="text-gray-300">Fast delivery with ongoing support</span>
+                <span className="text-gray-300">{portfolio.education.period}</span>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <span className="text-[#38BDF8]">▹</span>
-                <span className="text-gray-300">Transparent communication &amp; updates</span>
+                <span className="text-gray-300">6 months SWE Intern at Qualys</span>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-[#0D1528] border border-[#1A2E4A] rounded-lg p-4 text-center">
-                <p className="text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">6+</p>
-                <p className="text-gray-500 text-xs mt-1">Projects Built</p>
+                <p className="text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">8.0</p>
+                <p className="text-gray-500 text-xs mt-1">GPA / 10</p>
               </div>
               <div className="bg-[#0D1528] border border-[#1A2E4A] rounded-lg p-4 text-center">
-                <p className="text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">100%</p>
-                <p className="text-gray-500 text-xs mt-1">On-Time Delivery</p>
+                <p className="text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">23</p>
+                <p className="text-gray-500 text-xs mt-1">GitHub Repos</p>
               </div>
             </div>
           </div>
