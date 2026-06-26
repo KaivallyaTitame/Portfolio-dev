@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Kaivallya Titame | Software Developer",
     description: "Full Stack & AI developer with industry experience at Qualys. Java, Spring Boot, Angular, MEAN Stack.",
-    url: "https://kaivallyatitame.vercel.app",
+    url: "https://portfolio-dev-six-murex.vercel.app",
     type: "website",
   },
 };
