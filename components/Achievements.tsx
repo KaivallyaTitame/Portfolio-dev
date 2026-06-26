@@ -1,7 +1,6 @@
 "use client";
 
 import { Trophy, Award } from "lucide-react";
-import { motion } from "framer-motion";
 import { portfolio } from "@/data/portfolio";
 
 export default function Achievements() {
@@ -10,28 +9,18 @@ export default function Achievements() {
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-amber-500/3 rounded-full blur-3xl" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        {/* Section label */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center gap-4 mb-12"
-        >
+        <div data-aos="fade-right" className="flex items-center gap-4 mb-12">
           <span className="font-[family-name:var(--font-jetbrains-mono)] text-[#38BDF8] text-sm">07 / Achievements &amp; Certifications</span>
           <div className="flex-1 h-px bg-[#1A2E4A]"></div>
-        </motion.div>
+        </div>
 
-        {/* Certifications */}
         <h3 className="text-white font-semibold text-lg mb-6 font-[family-name:var(--font-space-grotesk)]">Certifications</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-12">
           {portfolio.certifications.map((cert, index) => (
-            <motion.div
+            <div
               key={cert.name}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className="bg-[#0D1528] border border-[#1A2E4A] rounded-xl p-5 hover:border-amber-500/40 transition-colors duration-300"
             >
               <div className="flex items-start gap-3">
@@ -44,20 +33,17 @@ export default function Achievements() {
                   <p className="text-gray-600 text-xs mt-1">{cert.year}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* Achievements */}
         <h3 className="text-white font-semibold text-lg mb-6 font-[family-name:var(--font-space-grotesk)]">Achievements</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {portfolio.achievements.map((ach, index) => (
-            <motion.div
+            <div
               key={ach.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: index * 0.1 }}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
               className="bg-[#0D1528] border border-[#1A2E4A] rounded-xl p-5 hover:border-[#38BDF8]/40 transition-colors duration-300"
             >
               <div className="flex items-start gap-3">
@@ -70,7 +56,7 @@ export default function Achievements() {
                   <p className="text-gray-600 text-xs mt-1">{ach.year}</p>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>

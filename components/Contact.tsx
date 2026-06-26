@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Mail, Phone } from "lucide-react";
 import { portfolio } from "@/data/portfolio";
 
@@ -28,26 +27,13 @@ export default function Contact() {
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-[#38BDF8]/3 rounded-full blur-3xl" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        {/* Section label */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center gap-4 mb-12"
-        >
+        <div data-aos="fade-right" className="flex items-center gap-4 mb-12">
           <span className="font-[family-name:var(--font-jetbrains-mono)] text-[#38BDF8] text-sm">06 / Get In Touch</span>
           <div className="flex-1 h-px bg-[#1A2E4A]"></div>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Left side */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div data-aos="fade-up">
             <h2 className="font-[family-name:var(--font-space-grotesk)] text-3xl font-bold text-white mb-4">
               Let&apos;s Build Something Together
             </h2>
@@ -101,16 +87,9 @@ export default function Contact() {
                 <span className="text-sm">WhatsApp</span>
               </a>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Right side: Form */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-[#08101F] border border-[#1A2E4A] rounded-xl p-6 hover:border-[#38BDF8]/20 transition-colors duration-300"
-          >
+          <div data-aos="fade-up" data-aos-delay="200" className="bg-[#08101F] border border-[#1A2E4A] rounded-xl p-6 hover:border-[#38BDF8]/20 transition-colors duration-300">
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-gray-400 text-sm mb-1.5">Name</label>
@@ -166,7 +145,7 @@ export default function Contact() {
               </button>
             </form>
             <p className="text-gray-500 text-xs text-center mt-4">Response within 24 hours</p>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

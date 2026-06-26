@@ -1,35 +1,20 @@
 "use client";
 
 import { portfolio } from "@/data/portfolio";
-import { motion } from "framer-motion";
 
 export default function About() {
   return (
     <section id="about" className="py-24 px-6 bg-[#0D1528] relative overflow-hidden">
-      {/* Subtle gradient */}
       <div className="absolute top-0 right-0 w-72 h-72 bg-[#38BDF8]/3 rounded-full blur-3xl" />
 
       <div className="max-w-5xl mx-auto relative z-10">
-        {/* Section label */}
-        <motion.div
-          initial={{ opacity: 0, x: -20 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center gap-4 mb-12"
-        >
+        <div data-aos="fade-right" className="flex items-center gap-4 mb-12">
           <span className="font-[family-name:var(--font-jetbrains-mono)] text-[#38BDF8] text-sm">01 / About Me</span>
           <div className="flex-1 h-px bg-[#1A2E4A]"></div>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 gap-12">
-          {/* Left side */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
+          <div data-aos="fade-up">
             <p className="text-gray-300 text-base leading-relaxed mb-4">
               I&apos;m a freelance developer with 6 months of professional experience at Qualys, where I built an AI-driven agent framework using MCP servers and Playwright for autonomous UI navigation.
             </p>
@@ -37,7 +22,6 @@ export default function About() {
               I specialize in Java, Spring Boot, Angular, and full-stack web development. Whether you need a custom web app, REST API, or AI automation tool — I deliver clean, production-ready code on time.
             </p>
 
-            {/* Inline badges */}
             <div className="flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#08101F] border border-[#1A2E4A] text-gray-300 text-sm">
                 📍 {portfolio.location}
@@ -49,16 +33,9 @@ export default function About() {
                 ● Open for Projects
               </span>
             </div>
-          </motion.div>
+          </div>
 
-          {/* Right side: What I offer card */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="bg-[#08101F] border border-[#1A2E4A] rounded-xl p-6 hover:border-[#38BDF8]/30 transition-colors duration-300"
-          >
+          <div data-aos="fade-up" data-aos-delay="200" className="bg-[#08101F] border border-[#1A2E4A] rounded-xl p-6 hover:border-[#38BDF8]/30 transition-colors duration-300">
             <div className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 rounded-lg bg-[#38BDF8]/10 flex items-center justify-center">
                 <svg className="w-5 h-5 text-[#38BDF8]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -90,7 +67,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Stat boxes */}
             <div className="grid grid-cols-2 gap-3">
               <div className="bg-[#0D1528] border border-[#1A2E4A] rounded-lg p-4 text-center">
                 <p className="text-2xl font-bold text-white font-[family-name:var(--font-space-grotesk)]">6+</p>
@@ -101,7 +77,7 @@ export default function About() {
                 <p className="text-gray-500 text-xs mt-1">On-Time Delivery</p>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
